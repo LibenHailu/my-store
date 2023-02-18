@@ -1,0 +1,12 @@
+<div class="detail-container">
+  <img src="{{ product.url }}" alt="" />
+  <div class="detail-item">
+    <h2>{{ product.name }}</h2>
+    <p>${{ product.price }}</p>
+    <p>{{ product.description }}</p>
+    <app-add-to-cart-form [product]="product"></app-add-to-cart-form>
+    <div class="back-link">
+      <a routerLink="/">&#8592; Back to product list</a>
+    </div>
+  </div>
+</div>
