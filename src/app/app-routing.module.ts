@@ -22,6 +22,10 @@ const routes: Routes = [
     path: 'checkout/:fullName/:totalPrice',
     component: ConfirmationComponent,
   },
+  {
+    path:'**',
+    redirectTo:'/'
+  }
 ];
 
 @NgModule({

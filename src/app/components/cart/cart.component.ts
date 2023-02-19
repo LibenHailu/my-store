@@ -28,7 +28,7 @@ export class CartComponent implements OnInit {
     const val = event.target.value;
     const cartIdx = this.carts.findIndex((cart) => cart.id == id);
     if (val === '0') {
-      console.log(val);
+      alert('Removed from the cart!')
       this.carts.splice(cartIdx, 1);
     } else {
       this.carts[cartIdx].quantity = val;
