@@ -4,11 +4,16 @@ import { CartComponent } from './components/cart/cart.component';
 import { ProductItemDetailComponent } from './components/product-item-detail/product-item-detail.component';
 import { ProductListComponent } from './components/product-list/product-list.component';
 import { ConfirmationComponent } from './components/confirmation/confirmation.component';
+import { LoginComponent } from './components/login/login.component';
 
 const routes: Routes = [
   {
     path: '',
     component: ProductListComponent,
+  },
+  {
+    path: 'login',
+    component: LoginComponent,
   },
   {
     path: 'carts',
@@ -23,9 +28,9 @@ const routes: Routes = [
     component: ConfirmationComponent,
   },
   {
-    path:'**',
-    redirectTo:'/'
-  }
+    path: '**',
+    redirectTo: '/',
+  },
 ];
 
 @NgModule({
