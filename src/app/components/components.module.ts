@@ -6,9 +6,10 @@ import { ProductItemComponent } from './product-item/product-item.component';
 import { RouterModule } from '@angular/router';
 import { ProductItemDetailComponent } from './product-item-detail/product-item-detail.component';
 import { AddToCartFormComponent } from './add-to-cart-form/add-to-cart-form.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CheckOutFormComponent } from './check-out-form/check-out-form.component';
 import { ConfirmationComponent } from './confirmation/confirmation.component';
+import { LoginComponent } from './login/login.component';
 @NgModule({
   declarations: [
     ProductListComponent,
@@ -18,7 +19,8 @@ import { ConfirmationComponent } from './confirmation/confirmation.component';
     AddToCartFormComponent,
     CheckOutFormComponent,
     ConfirmationComponent,
+    LoginComponent,
   ],
-  imports: [CommonModule, RouterModule, FormsModule],
+  imports: [CommonModule, RouterModule, FormsModule, ReactiveFormsModule],
 })
 export class ComponentsModule {}
