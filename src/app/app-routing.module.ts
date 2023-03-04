@@ -5,6 +5,7 @@ import { ProductItemDetailComponent } from './components/product-item-detail/pro
 import { ProductListComponent } from './components/product-list/product-list.component';
 import { ConfirmationComponent } from './components/confirmation/confirmation.component';
 import { LoginComponent } from './components/login/login.component';
+import { SignupComponent } from './components/signup/signup/signup.component';
 
 const routes: Routes = [
   {
@@ -14,6 +15,10 @@ const routes: Routes = [
   {
     path: 'login',
     component: LoginComponent,
+  },
+  {
+    path: 'signup',
+    component: SignupComponent,
   },
   {
     path: 'carts',

@@ -1,0 +1,100 @@
+<div class="mx-auto">
+  <div class="d-flex justify-content-center row">
+    <form
+      class="form-margin col-lg-4 col-xl-3 col-md-6 col-xs-2 col-sm-8"
+      [formGroup]="form"
+      #loginForm="ngForm"
+    >
+      <legend>Signup</legend>
+      <div class="form-margin">
+        <label>Firstname</label>
+        <input
+          name="firstname"
+          class="form-control"
+          placeholder="your firstname"
+          formControlName="firstname"
+        />
+        <span
+          class="text-danger pt-2"
+          *ngIf="(form.controls['firstname']?.touched || loginForm?.submitted) && form.controls['firstname'].errors?.['required']"
+        >
+          Firstname is required.
+        </span>
+      </div>
+      <div class="form-margin">
+        <label>Lastname</label>
+        <input
+          name="lastname"
+          class="form-control"
+          placeholder="your lastname"
+          formControlName="lastname"
+        />
+        <span
+          class="text-danger pt-2"
+          *ngIf="(form.controls['lastname']?.touched || loginForm?.submitted) && form.controls['lastname'].errors?.['required']"
+        >
+          Lastname is required.
+        </span>
+      </div>
+      <div class="form-margin">
+        <label>Email</label><br />
+        <input
+          name="email"
+          class="form-control"
+          placeholder="your email"
+          formControlName="email"
+        />
+        <span
+          class="text-danger pt-2"
+          *ngIf="(form.controls['email']?.touched || loginForm?.submitted) && form.controls['email'].errors?.['required']"
+        >
+          Email is required.
+        </span>
+        <span
+          class="text-danger pt-2"
+          *ngIf="(form.controls['email']?.touched || loginForm?.submitted) && form.controls['email'].errors?.['email']"
+        >
+          Invalid email.
+        </span>
+      </div>
+
+      <div class="form-margin">
+        <label>Password</label><br />
+        <input
+          class="form-control"
+          placeholder="Your password"
+          name="password"
+          formControlName="password"
+          type="password"
+        />
+        <span
+          class="text-danger pt-2"
+          *ngIf="(form.controls['password']?.touched || loginForm?.submitted)  && form.controls['password'].errors?.['required']"
+        >
+          Password is required.
+        </span>
+        <span
+          class="text-danger pt-2"
+          *ngIf="(form.controls['password']?.touched || loginForm?.submitted)  && form.controls['password'].errors?.['minlength']"
+        >
+          Password should be atleast 6 characters.
+        </span>
+      </div>
+      <div class="form-margin">
+        <p>
+          Already a member?
+          <a class="text-decoration-none" routerLink="/login">Login</a>
+        </p>
+      </div>
+      <div class="form-buttons">
+        <button
+          [disabled]="form.invalid"
+          class="btn btn-primary"
+          (click)="signup()"
+        >
+          Signup
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

@@ -20,6 +20,15 @@ export class AuthService {
     // we still need to handle the reception of the token
   }
 
+  signup(user: User) {
+    return this.http.post('http://0.0.0.0:3000/users', user).pipe(
+      tap((res) => this.setSession(res as string)),
+      shareReplay()
+    );
+    // this is just the HTTP call,
+    // we still need to handle the reception of the token
+  }
+
   private setSession(token: string) {
     localStorage.setItem('id_token', token);
   }

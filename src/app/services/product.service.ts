@@ -8,6 +8,9 @@ import { Product } from '../models/product';
 export class ProductService {
   constructor(private http: HttpClient) {}
   getProducts() {
-    return this.http.get<Product[]>('/assets/data.json');
+    return this.http.get<Product[]>('http://0.0.0.0:3000/products');
+  }
+  getProduct(id: string) {
+    return this.http.get<Product>(`http://0.0.0.0:3000/products/${id}`);
   }
 }
