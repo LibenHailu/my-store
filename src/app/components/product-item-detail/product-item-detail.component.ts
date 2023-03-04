@@ -23,13 +23,10 @@ export class ProductItemDetailComponent implements OnInit {
     };
   }
   ngOnInit(): void {
-    const id = parseInt(this.route.snapshot.params['id']);
-    this.productService.getProducts().subscribe((res) => {
-      for (let i = 0; i < res.length; i++) {
-        if (res[i].id === id) {
-          this.product = res[i];
-        }
-      }
+    const id = this.route.snapshot.params['id'];
+    this.productService.getProduct(id).subscribe((res) => {
+      console.log(res);
+      this.product = res;
     });
   }
 }

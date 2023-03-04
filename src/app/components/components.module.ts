@@ -10,6 +10,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CheckOutFormComponent } from './check-out-form/check-out-form.component';
 import { ConfirmationComponent } from './confirmation/confirmation.component';
 import { LoginComponent } from './login/login.component';
+import { SignupComponent } from './signup/signup/signup.component';
 @NgModule({
   declarations: [
     ProductListComponent,
@@ -20,6 +21,7 @@ import { LoginComponent } from './login/login.component';
     CheckOutFormComponent,
     ConfirmationComponent,
     LoginComponent,
+    SignupComponent,
   ],
   imports: [CommonModule, RouterModule, FormsModule, ReactiveFormsModule],
 })
